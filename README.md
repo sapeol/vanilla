@@ -1,2 +1,2 @@
 # vanilla
-my portfolio in vanilla stack
+my portfolio on vanilla stack
