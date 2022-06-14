@@ -1,0 +1,134 @@
+@import "variables.scss";
+@import "mixins.scss";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  color: #fff;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Tahoma", "Anton", sans-serif;
+  font-size: 32px;
+  line-height: 1.5;
+  background-color: $base-color;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+img {
+  max-width: 100%;
+}
+header {
+  padding: 2rem;
+  position: fixed;
+  right: 0;
+  .navigation {
+    @include card;
+    padding: 1rem;
+  }
+  .headerlinks {
+    display: inline;
+    text-decoration: none;
+  }
+}
+section {
+  min-height: 100vh;
+  padding: 2rem;
+}
+.vertical-text {
+  transform: rotate(100grad);
+  margin: 31em -21em;
+  position: absolute;
+  top: 0;
+  left: 0;
+      z-index: -1;
+
+  &::after{
+    content: "Web Developer";
+    width: fit-content;
+    font-size: 8em;
+    color: #7fffd41f;
+    z-index: -18;
+  }
+}
+.about {
+height: 80vh;
+  
+  font-size: 18px;
+  p {
+    margin-top: 1rem;
+ 
+    @media (max-width: 600px) {
+font-size: 1.5rem;      
+    }
+  }
+  .introduction {
+    @include card;
+    width: fit-content;
+    font-size: 1.5rem;
+    width: 600px;
+    @media (max-width: 600px) {
+font-size: 2rem;   
+width: 100%;
+
+    }
+  }
+}
+#tools h2{
+  padding-bottom: 2rem;
+}
+.projects {
+  .project-item {
+    padding: 2rem 0;
+    .project-title {
+      padding-bottom: 1.5rem;
+      .link {
+        text-decoration: none;
+        transition: all 0.5s linear;
+        &::after:hover {
+          content: '⬇️';
+        }
+        &:hover {
+          color: #8cada7;
+        }
+      }
+    }
+    .responsibilities {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.contact{
+  form {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    input, textarea{
+      padding: 2em;
+      color: #000;
+    }
+    input[type="submit"]{
+      background-color: #8cada7;
+      color: #fff;
+      padding: 1em;
+      border: none;
+      font-size: 1.2rem;
+      cursor: pointer;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: #fff;
+        color: #8cada7;
+      }
+    }
+}
+}
+footer {
+  @include card;
+  border-radius: 18px;
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+}
