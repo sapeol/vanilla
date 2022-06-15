@@ -10,9 +10,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Tahoma", "Anton", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   font-size: 32px;
-  line-height: 1.5;
+  line-height: normal;
   background-color: $base-color;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -20,35 +21,23 @@ body {
 img {
   max-width: 100%;
 }
-header {
-  padding: 2rem;
-  position: fixed;
-  right: 0;
-  .navigation {
-    @include card;
-    padding: 1rem;
-  }
-  .headerlinks {
-    display: inline;
-    text-decoration: none;
-  }
-}
+
 section {
   min-height: 100vh;
   padding: 2rem;
 }
 .vertical-text {
   transform: rotate(100grad);
-  margin: 31em -21em;
+  margin: 31em -18em;
   position: absolute;
   top: 0;
   left: 0;
-      z-index: -1;
+ z-index: -1;
 
   &::after{
     content: "Web Developer";
     width: fit-content;
-    font-size: 8em;
+    font-size: 5em;
     color: #7fffd41f;
     z-index: -18;
   }
